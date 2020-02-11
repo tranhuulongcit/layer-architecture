@@ -21,7 +21,7 @@ public class CommentController {
 
     @PostMapping("/comment/post")
     public ResponseEntity<CommentEntity> postComment(@RequestBody CommentDTO commentDTO) {
-        //validate data...
+        //đoạn này sẽ validate data trước khi vào xữ lý
         return new ResponseEntity<>(commentService.post(commentDTO), HttpStatus.OK);
     }
 

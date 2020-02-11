@@ -18,6 +18,7 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public CommentEntity post(CommentDTO commentDTO) {
         //mapper data và lưu vào database
+        //trong thực tế thì ở đây sẽ xữ lý thêm business logic khi user comment
         return commentRepository.saveComment(commentDTO.toCommentEntity());
     }
 
